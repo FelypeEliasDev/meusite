@@ -331,12 +331,432 @@ h1 {
 
 .intro-section,
 .projects-section,
+.dashboard-section,
 .contact-section {
   display: grid;
   grid-template-columns: minmax(0, 280px) minmax(0, 1fr);
   gap: clamp(1.2rem, 3vw, 3rem);
   padding: clamp(2.5rem, 5vw, 4rem) 0;
   border-top: 1px solid var(--line);
+}
+
+.projects-content > p {
+  max-width: 720px;
+  color: var(--muted);
+  font-size: 1.06rem;
+  line-height: 1.8;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.8rem;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: var(--panel);
+  box-shadow: 0 16px 38px rgba(19, 18, 24, 0.05);
+}
+
+.project-type {
+  margin-bottom: 0.9rem;
+  color: var(--accent-strong);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+}
+
+.project-card h3 {
+  margin: 0 0 0.65rem;
+  font-size: clamp(1.3rem, 2vw, 1.7rem);
+  line-height: 1.15;
+  letter-spacing: -0.04em;
+}
+
+.project-card > p:not(.project-type) {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 1.1rem 0 1.3rem;
+  padding: 0;
+  list-style: none;
+}
+
+.project-tags li {
+  padding: 0.35rem 0.65rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: auto;
+  color: var(--accent-strong);
+  font-size: 0.88rem;
+  font-weight: 800;
+}
+
+.project-link:hover,
+.project-link:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.dashboard-content {
+  min-width: 0;
+}
+
+.dashboard-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.dashboard-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin: 0 0 1rem;
+  color: var(--accent-strong);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.dashboard-badge .status-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  box-shadow: 0 0 0 4px rgba(209, 91, 60, 0.12);
+}
+
+.dashboard-intro {
+  max-width: 620px;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.demo-disclaimer {
+  flex: 0 0 min(260px, 38%);
+  padding: 0.9rem 1rem;
+  border: 1px solid rgba(185, 71, 45, 0.2);
+  border-radius: 14px;
+  background: rgba(240, 213, 186, 0.3);
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.6;
+}
+
+.demo-disclaimer strong {
+  display: block;
+  margin-bottom: 0.15rem;
+  color: var(--accent-strong);
+}
+
+.dashboard-panel {
+  display: grid;
+  grid-template-columns: minmax(210px, 0.72fr) minmax(0, 1.28fr);
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+  margin-top: 1.5rem;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: var(--panel-strong);
+  box-shadow: 0 16px 38px rgba(19, 18, 24, 0.06);
+}
+
+.scenario-form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.9rem;
+}
+
+.scenario-form h3,
+.dashboard-results-heading h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  letter-spacing: -0.02em;
+}
+
+.scenario-form label {
+  display: grid;
+  gap: 0.4rem;
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.scenario-form input,
+.triage-form textarea {
+  width: 100%;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #fff;
+  color: var(--ink);
+  font: inherit;
+}
+
+.scenario-form input {
+  min-height: 44px;
+}
+
+.triage-form textarea {
+  min-height: 150px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.scenario-form input:focus-visible,
+.triage-form textarea:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.scenario-submit {
+  justify-content: center;
+  margin-top: 0.2rem;
+  border: 0;
+  cursor: pointer;
+  font-size: 0.76rem;
+}
+
+.scenario-submit:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+  transform: none;
+}
+
+.form-hint {
+  min-height: 1.3em;
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+
+.dashboard-results {
+  min-width: 0;
+}
+
+.dashboard-results-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.85rem;
+}
+
+.dashboard-results-heading span,
+.dashboard-footnote {
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.65rem;
+}
+
+.metric-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  min-width: 0;
+  padding: 0.85rem;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: rgba(247, 245, 240, 0.72);
+}
+
+.metric-card span {
+  color: var(--muted);
+  font-size: 0.72rem;
+  line-height: 1.4;
+}
+
+.metric-card strong {
+  overflow-wrap: anywhere;
+  font-size: clamp(1.15rem, 2.3vw, 1.7rem);
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+}
+
+.time-comparison {
+  display: grid;
+  gap: 0.85rem;
+  margin-top: 1.35rem;
+}
+
+.comparison-label {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.35rem;
+  color: var(--muted);
+  font-size: 0.74rem;
+}
+
+.comparison-label strong {
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.comparison-track {
+  height: 0.55rem;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(23, 21, 27, 0.07);
+}
+
+.comparison-bar {
+  display: block;
+  width: 0;
+  height: 100%;
+  border-radius: inherit;
+  transition: width 0.35s ease;
+}
+
+.comparison-bar--manual {
+  background: linear-gradient(90deg, #d15b3c, #ea7f5b);
+}
+
+.comparison-bar--automated {
+  background: linear-gradient(90deg, #667d67, #9bb795);
+}
+
+.dashboard-footnote {
+  margin-top: 1rem;
+  line-height: 1.6;
+}
+
+.triage-demo {
+  margin-top: 1.25rem;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.48);
+}
+
+.triage-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.triage-heading h3 {
+  margin: 0 0 0.55rem;
+  font-size: clamp(1.25rem, 2vw, 1.6rem);
+  letter-spacing: -0.04em;
+}
+
+.triage-heading > div > p:last-child {
+  max-width: 640px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+.triage-heading .scenario-submit {
+  flex: 0 0 auto;
+}
+
+.triage-form {
+  margin-top: 1rem;
+}
+
+.triage-form > label {
+  display: block;
+  margin-bottom: 0.45rem;
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.triage-form-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 0.6rem;
+}
+
+.triage-form-footer .form-hint {
+  max-width: 560px;
+}
+
+.triage-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.65rem;
+  margin-top: 1.2rem;
+}
+
+.triage-list {
+  display: grid;
+  gap: 0.55rem;
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.triage-list[hidden] {
+  display: none;
+}
+
+.triage-ticket {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.8rem 0.9rem;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--panel-strong);
+}
+
+.triage-ticket > p {
+  color: var(--ink);
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+.triage-result {
+  flex: 0 0 auto;
+  color: var(--muted);
+  font-size: 0.73rem;
+  font-weight: 700;
+  text-align: right;
+}
+
+.triage-ticket.is-processed .triage-result {
+  color: #446447;
+}
+
+.triage-demo > .form-hint {
+  margin-top: 0.8rem;
 }
 
 h2 {
@@ -392,8 +812,48 @@ h2 {
 
   .intro-section,
   .projects-section,
+  .dashboard-section,
   .contact-section {
     grid-template-columns: 1fr;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-heading {
+    flex-direction: column;
+  }
+
+  .demo-disclaimer {
+    flex-basis: auto;
+  }
+
+  .dashboard-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .triage-heading {
+    flex-direction: column;
+  }
+
+  .triage-form-footer {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .triage-metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .triage-ticket {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .triage-result {
+    text-align: left;
   }
 }
 

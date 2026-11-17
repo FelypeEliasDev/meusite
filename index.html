@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Portfólio de Felype Dev, estudante de Sistemas para Internet com interesse em desenvolvimento web e inteligência artificial."
+      content="Portfólio de Felype Dev: projetos web, experiências interativas e estudos em tecnologia."
     />
     <meta name="theme-color" content="#f7f5f0" />
     <title>Felype Dev — Portfólio</title>
@@ -33,6 +33,7 @@
         <a class="nav-link nav-link--active" href="#inicio">Início</a>
         <a class="nav-link" href="#sobre">Sobre</a>
         <a class="nav-link" href="#projetos">Projetos</a>
+        <a class="nav-link" href="#dashboard">Dashboard</a>
         <a class="nav-contact" href="#contato">
           Vamos conversar
           <span aria-hidden="true">↗</span>
@@ -54,13 +55,12 @@
           </h1>
 
           <p class="hero-description">
-            Estou aprimorando minhas habilidades em desenvolvimento web e explorando prompts para inteligência artificial.
-            <span>Acredito que a IA pode transformar a forma como criamos e interagimos com a tecnologia.</span>
+            Transformo ideias em experiências web úteis, com interfaces cuidadosas e interações que fazem sentido.
+            <span>Gosto de aprender construindo e de explorar como a tecnologia pode resolver problemas do dia a dia.</span>
           </p>
 
           <p class="hero-note">
-            Sou estudante de Sistemas para Internet e gosto de usar a IA para construir,
-            desenvolver e evoluir com essa tecnologia.
+            Estudante de Sistemas para Internet, desenvolvendo projetos e evoluindo a cada entrega.
           </p>
 
           <div class="hero-actions">
@@ -100,30 +100,226 @@
         <div>
           <h2 id="about-title">Conheça o Felype.</h2>
           <p>
-            Este é o começo de um sonho. Sou estudante e estou me preparando para criar
-            projetos com apoio da IA, enquanto aprendo cada vez mais sobre tecnologia e
-            programação. Acredito que o conhecimento, a dedicação e a tecnologia podem
-            transformar a vida das pessoas. Uso o vibe coding para tornar meu trabalho mais
-            ágil e eficiente e estou sempre em busca de novas formas de aprender e evoluir.
+            Sou estudante de Sistemas para Internet e aprendo colocando ideias em prática.
+            Construo páginas e experiências interativas enquanto aprofundo meus conhecimentos
+            em desenvolvimento web. Quero criar soluções cada vez mais úteis, incluindo
+            automações e ferramentas que simplifiquem tarefas reais.
           </p>
         </div>
       </section>
 
       <section class="projects-section" id="projetos" aria-labelledby="projects-title">
-        <p class="section-kicker">02 — O QUE FAÇO</p>
-        <div>
-          <h2 id="projects-title">Idealizo e transformo ideias em códigos.</h2>
+        <p class="section-kicker">02 — PROJETOS</p>
+        <div class="projects-content">
+          <h2 id="projects-title">Ideias que já ganharam forma.</h2>
           <p>
-            Tenho alguns projetos em andamento no GitHub. Ainda são simples, mas são um
-            começo. Tenho focado em desenvolvimento web e estudo para me tornar
-            desenvolvedor full stack. Também busco aprender mais sobre IA e como ela pode
-            me ajudar a criar projetos mais inteligentes e eficientes.
+            Dois projetos web com propósitos diferentes: um conceito editorial para a torcida
+            santista e uma página afetiva com recursos interativos.
           </p>
+          <div class="project-grid">
+            <article class="project-card">
+              <p class="project-type">CONCEITO WEB · ESPORTES</p>
+              <h3>Da Vila para o mundo</h3>
+              <p>
+                Um portal conceitual para a torcida do Santos, com histórias, conteúdo sobre
+                os jogos e caminhos para os canais oficiais. A agenda e os placares não são
+                exibidos ao vivo.
+              </p>
+              <ul class="project-tags" aria-label="Tecnologias e recursos">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Menu responsivo</li>
+              </ul>
+              <a
+                class="project-link"
+                href="https://github.com/FelypeEliasDev/page.santos7"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Ver código no GitHub <span aria-hidden="true">↗</span>
+              </a>
+            </article>
+
+            <article class="project-card">
+              <p class="project-type">PÁGINA INTERATIVA · PESSOAL</p>
+              <h3>Um cantinho nosso</h3>
+              <p>
+                Uma página para guardar memórias, com contador de tempo atualizado a cada
+                segundo e uma cartinha que pode ser aberta e fechada.
+              </p>
+              <ul class="project-tags" aria-label="Tecnologias e recursos">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Interações</li>
+              </ul>
+              <a
+                class="project-link"
+                href="https://github.com/FelypeEliasDev/loveanaeluiz"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Ver código no GitHub <span aria-hidden="true">↗</span>
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="dashboard-section" id="dashboard" aria-labelledby="dashboard-title">
+        <p class="section-kicker">03 — LABORATÓRIO</p>
+        <div class="dashboard-content">
+          <div class="dashboard-heading">
+            <div>
+              <p class="dashboard-badge">
+                <span class="status-dot" aria-hidden="true"></span>
+                DEMONSTRAÇÃO INTERATIVA
+              </p>
+              <h2 id="dashboard-title">Quanto tempo uma automação poderia liberar?</h2>
+              <p class="dashboard-intro">
+                Classifique solicitações reais e estime impacto usando medições que você informar.
+              </p>
+            </div>
+            <p class="demo-disclaimer">
+              <strong>Informe seus dados. </strong> Insira cinco mensagens reais e anonimizadas.
+              A classificação é local; nada é enviado ou salvo. Projeções dependem de medições
+              fornecidas por você.
+            </p>
+          </div>
+
+          <div class="dashboard-panel">
+            <form class="scenario-form" id="scenario-form">
+              <h3>Configure o cenário</h3>
+              <label for="tasks-per-month">
+                Tarefas por mês (medidas)
+                <input id="tasks-per-month" name="tasks" type="number" min="0" step="1" required />
+              </label>
+              <label for="manual-minutes">
+                Minutos manuais por tarefa (medidos)
+                <input id="manual-minutes" name="manual" type="number" min="0.1" step="0.1" required />
+              </label>
+              <label for="automated-minutes">
+                Minutos automatizados por tarefa (medidos)
+                <input id="automated-minutes" name="automated" type="number" min="0" step="0.1" required />
+              </label>
+              <button class="button button--primary scenario-submit" type="submit">
+                Calcular estimativa
+                <span aria-hidden="true">↗</span>
+              </button>
+              <p class="form-hint" id="scenario-status" role="status" aria-live="polite">
+                Informe medições reais para calcular uma projeção.
+              </p>
+            </form>
+
+            <div class="dashboard-results" aria-labelledby="results-title">
+              <div class="dashboard-results-heading">
+                <h3 id="results-title">Projeção mensal</h3>
+                <span>calculada somente com suas medições</span>
+              </div>
+              <div class="metric-grid">
+                <article class="metric-card">
+                  <span>Saldo estimado / mês</span>
+                  <strong id="hours-saved">—</strong>
+                </article>
+                <article class="metric-card">
+                  <span>Projeção anual</span>
+                  <strong id="yearly-hours-saved">—</strong>
+                </article>
+                <article class="metric-card">
+                  <span>Redução calculada</span>
+                  <strong id="time-reduction">—</strong>
+                </article>
+                <article class="metric-card">
+                  <span>Tarefas consideradas</span>
+                  <strong id="tasks-count">—</strong>
+                </article>
+              </div>
+              <div class="time-comparison" aria-label="Comparação do tempo mensal estimado">
+                <div class="comparison-row">
+                  <div class="comparison-label">
+                    <span>Processo manual</span>
+                    <strong id="manual-time">—</strong>
+                  </div>
+                  <div class="comparison-track" aria-hidden="true">
+                    <span class="comparison-bar comparison-bar--manual" id="manual-bar"></span>
+                  </div>
+                </div>
+                <div class="comparison-row">
+                  <div class="comparison-label">
+                    <span>Cenário automatizado</span>
+                    <strong id="automated-time">—</strong>
+                  </div>
+                  <div class="comparison-track" aria-hidden="true">
+                    <span class="comparison-bar comparison-bar--automated" id="automated-bar"></span>
+                  </div>
+                </div>
+              </div>
+              <p class="dashboard-footnote">
+                Projeção calculada a partir das medições informadas; não é um resultado operacional
+                verificado. Valores negativos indicam aumento de tempo.
+              </p>
+            </div>
+          </div>
+
+          <div class="triage-demo">
+            <div class="triage-heading">
+              <div>
+                <p class="project-type">CLASSIFICAÇÃO LOCAL · REGRAS</p>
+                <h3>Triagem de solicitações reais</h3>
+                <p>
+                  Cole cinco mensagens reais e anonimizadas, uma por linha. As regras categorizam
+                  e sinalizam prioridade no navegador; o conteúdo não é enviado nem persistido.
+                </p>
+              </div>
+            </div>
+
+            <form class="triage-form" id="triage-form">
+              <label for="triage-input">Cinco solicitações reais, uma por linha</label>
+              <textarea
+                id="triage-input"
+                name="requests"
+                rows="6"
+                maxlength="10000"
+                aria-describedby="triage-guidance triage-status"
+                required
+              ></textarea>
+              <div class="triage-form-footer">
+                <p class="form-hint" id="triage-guidance">
+                  Remova nomes, contatos, números de pedido e qualquer dado pessoal ou confidencial.
+                </p>
+                <button class="button button--primary scenario-submit" id="run-triage" type="submit" disabled>
+                  Classificar solicitações
+                  <span aria-hidden="true">↗</span>
+                </button>
+              </div>
+            </form>
+
+            <div class="triage-metrics" aria-label="Resultados da última execução">
+              <article class="metric-card">
+                <span>Solicitações classificadas</span>
+                <strong id="triage-processed">—</strong>
+              </article>
+              <article class="metric-card">
+                <span>Prioridade alta sinalizada</span>
+                <strong id="triage-high-priority">—</strong>
+              </article>
+              <article class="metric-card">
+                <span>Categorias identificadas</span>
+                <strong id="triage-categories">—</strong>
+              </article>
+            </div>
+
+            <ol class="triage-list" id="triage-list" aria-label="Resultados da triagem" hidden></ol>
+            <p class="form-hint" id="triage-status" role="status" aria-live="polite">
+              Insira cinco solicitações reais anonimizadas para iniciar.
+            </p>
+          </div>
         </div>
       </section>
 
       <section class="contact-section" id="contato" aria-labelledby="contact-title">
-        <p class="section-kicker">03 — CONTATO</p>
+        <p class="section-kicker">04 — CONTATO</p>
         <div>
           <h2 id="contact-title">Vamos criar algo?</h2>
           <p>
